@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="ECommerce.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>My ECom Web</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <link href="css/Custom.css" rel="stylesheet" />
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!---NavBar Start---->
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+            <div class ="container ">
+                <div class ="navbar-header">
+                    <button type="button" class ="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class ="sr-only">Toggle navigation</span>
+                        <span class ="icon-bar"></span>
+                        <span class ="icon-bar"></span>
+                        <span class ="icon-bar"></span>
+
+                    </button>
+                   <a class="navbar-brand" href="WebForm1.aspx"><span >
+                        <img src="icons/glow.png" alt="Ichiraku Clothing" height="30" /></span >Ichiraku Clothing
+                        </a>
+
+                </div>
+                <div class ="navbar-collapse collapse">
+                    <ul class ="nav navbar-nav navbar-right">
+                        <li ><a href ="WebForm1.aspx">Home</a> </li>
+                         <li ><a href="About.aspx">About</a> </li>
+                        <li ><a href ="#">Contact US</a> </li>
+                       <%-- <li ><a href ="#">Blog-</a> </li>--%>
+                        <li class ="drodown">
+                            <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Products<b class ="caret"></b></a>
+                            <ul class ="dropdown-menu ">
+                                
+                                <li> <a href ="AddProduct.aspx">Add Product</a></li>
+                                <li> <a href ="EditProduct.aspx">Edit Product</a></li>
+                                <li> <a href ="DeleteProduct.aspx">Delete Product</a></li>
+                               
+                            </ul>
+
+                        </li>
+                        <li class ="drodown" >
+                                     <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Manage <b class ="caret"></b></a> 
+                                     <ul class ="dropdown-menu">
+                                         <li ><a href ="AddBrand.aspx">Add Brand</a> </li>
+                                         <li ><a href ="AddCategory.aspx">Add Category</a> </li>
+                                        <li ><a href ="SubCategory.aspx">Add SubCategory</a> </li>
+                                        <li ><a href ="AddGender.aspx">Add Gender</a> </li>
+                                        <li ><a href ="AddSize.aspx">Add Size</a> </li>
+                                         <li role="separator" class ="divider "></li> 
+                                         <li ><a href ="EditBrand.aspx">Edit Brand</a> </li>
+                                         <li ><a href="EditCategory.aspx">Edit Category</a> </li>
+                                         <li ><a href="EditSubCategory.aspx">Edit SubCategory</a> </li>
+                                         <li ><a href="EditSize.aspx">Edit Size</a> </li>
+                                         <li role="separator" class ="divider "></li> 
+                                         <li ><a href="Report.aspx">Report</a> </li>
+                                      </ul>
+                        </li>
+
+
+
+                        <li >
+                            <asp:Button ID="btnAdminlogout" CssClass ="btn btn-default navbar-btn " runat="server" Text="Sign Out" OnClick="btnAdminlogout_Click" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+             <!---NavBar Ends---->
+              <div class="container ">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+
+        </div>
+            </div>
+    </form>
+    <!---Footer content starts here --->
+<footer style="background-color: #222; color: #fff; padding: 20px 0;">
+    <hr />
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+            <div style="flex-basis: calc(50% - 10px); margin-bottom: 20px;">
+                <img src="icons/glow.png" alt="Your Store Logo" style="width: 200px; height: 200px; margin-bottom: 10px;"/>
+                <p style="font-size: 25px;">Ichiraku Clothing</p>
+            </div>
+            <div style="flex-basis: calc(25% - 10px); margin-bottom: 20px;">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0; text-align: left;">
+                    <li style="margin-bottom: 5px;"><a href="WebForm1.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">Home</a></li>
+                    <li style="margin-bottom: 5px;"><a href="About.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">About</a></li>
+                    <li style="margin-bottom: 5px;"><a href="Contact.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">Contact</a></li>
+                    <li style="margin-bottom: 5px;"><a href="Products.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">Products</a></li>
+                    <li style="margin-bottom: 5px;"><a href="SignInPage.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">Sign In</a></li>
+                    <li style="margin-bottom: 5px;"><a href="SignUpPage.aspx" style="color: #fff; text-decoration: none; transition: color 0.3s;">Sign Up</a></li>
+                </ul>
+            </div>
+            <div style="flex-basis: calc(25% - 10px); margin-bottom: 20px;">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Contact Us</h3>
+                <p style="margin-bottom: 5px;">Phone: 011 837 5505</p>
+                <p>Email: codebuster61@gmail.com</p>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <p style="text-align: center;">&copy;2023 CodeBusters</p>
+</footer>
+<!---Footer content ends here --->
+</body>
+</html>
